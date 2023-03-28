@@ -1,16 +1,12 @@
 import PropTypes from 'prop-types';
 import '../ContactItem/ContactItem.css';
 
-export const ContactItem = ({ id, name, number, deleteContact }) => (
+export const ContactItem = ({ name, number, deleteContact }) => (
   <li className="contact-item">
     <p>
       {name}: {number}
     </p>
-    <button
-      className="item-btn"
-      type="button"
-      onClick={() => deleteContact(id)}
-    >
+    <button className="item-btn" type="button" onClick={deleteContact}>
       Delete
     </button>
   </li>
